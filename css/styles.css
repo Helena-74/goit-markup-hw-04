@@ -17,6 +17,9 @@ border-radius: 4px;*/
   --accent-color: #4d5ae5;
   --main-text-color: #ffffff;
   --background-color: #f4f4fd;
+  --text-company-color:#8E8F99;
+  --text-accent-company: #404BBF;
+  --soc-focus-color:  #31D0AA;
 }
 
 p,
@@ -179,10 +182,24 @@ img {
 }
 /*Hero*/
 .hero-title {
+  max-width: 1440px;
+  max-height: 600px;  
+  margin: 0 auto;
   padding: 188px 0;
   text-align: center;
   color: var(--main-text-color);
   background: var(--main-title-color);
+  background-image: linear-gradient(
+    to right,
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+  ),
+  url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+    
+  
 }
 .hero-pre-title {
   font-weight: 700;
@@ -216,6 +233,10 @@ img {
 
   margin-top: 48px;
 }
+.hero-btn-activ:is(:hover, :focus){
+background-color: var(--accent-color);
+}
+
 
 .btn {
 }
@@ -267,12 +288,17 @@ img {
   padding: 12px 24px;
 }
 
-.button-primary .btn:hover,
-.button-primary.btn:focus {
+.button-primary:hover {
+  color: var(--main-text-color);
+  
+  background: var(--main-btn-color);
+box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.button-primary:focus{
   color: var(--main-text-color);
   background: var(--accent-color);
 }
-
 /*Section*/
 .section {
   padding: 120px 0;
@@ -287,7 +313,38 @@ img {
 .section .item + .item {
   margin-left: 24px;
 }
+.section .item-pre {
+}
+.section .item-pre + .item-pre {
+  margin-left: 24px;
+}
+.item-pre::before {
+  display: block;
+  content: "";
+  width: 264px;
+  height: 112px;
 
+  background: #f4f4fd;
+  border-radius: 4px;
+
+  background-size: 64px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f4f4fd;
+  border-radius: 4px;
+}
+.icon-antena::before {
+  background-image: url(../images/antenna.svg);
+}
+.icon-clock::before {
+  background-image: url(../images/clock.svg);
+}
+.icon-diagrama::before {
+  background-image: url(../images/diagrama.svg);
+}
+.icon-astronaut::before {
+  background-image: url(../images/astronaut.svg);
+}
 .section-link {
   font-size: 16px;
   line-height: 1.5;
@@ -300,6 +357,7 @@ img {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--second-title-color);
+  margin-top: 8px;
   margin-bottom: 8px;
 }
 
@@ -339,6 +397,7 @@ img {
   letter-spacing: 0.02em;
   text-align: center;
   color: var(--main-title-color);
+  margin-bottom: 8px;
 }
 .list .section-list + .section-list {
   margin-left: 24px;
@@ -347,12 +406,92 @@ img {
   background: var(--background-color);
 }
 .section-list {
+
   background: var(--main-text-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 .section-list-item {
   margin-bottom: 48px;
   background: var(--main-text-color);
 }
+
+.section-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.section-soc-title{
+  width: 40px;
+  height: 40px;
+}
+.section-soc-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--accent-color);
+}
+.section-soc-link:is(:hover,:focus) {
+  background-color: var(--soc-focus-color);
+}
+  
+/*Section Customers*/
+.section-company{
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+
+.section-comp-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+
+}
+.section-comp-title {
+  width: calc((100%-120px)/6);
+  height: 88px;
+}
+.icon-company{
+  fill: var(--text-company-color);
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--text-company-color);
+  
+}
+
+.icon-company:is(:hover,:focus) {
+  border-color: var(--main-btn-color);
+  fill: var(--main-btn-color);
+}
+
+
+.btn-social {
+  
+}
+/*.icon-social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+  
+  width: 232px;
+  height: 40px;
+ 
+}
+.icon-social+.icon-social {
+  margin-left: 24px;
+}
+
 /*Portfolio*/
 .section-pre {
   padding-top: 96px;
@@ -363,15 +502,26 @@ img {
   justify-content: center;
   margin-bottom: 72px;
 }
+
+.section-list-item{
+
+}
 .gallery {
   padding: 32px 0 32px 16px;
   border: 1px solid var(--second-btn-color);
+
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .section-portfolio {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: -48px;
+}
+
+.gallery:hover {
+  border: 0.5px solid #F4F4FD;
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .section-portfolio .section-list-item + .section-list-item {
   margin-left: 24px;
@@ -387,9 +537,11 @@ img {
   padding: 100px 0;
   background: var(--second-title-color);
 }
+.container {
+  
+}
 .footer-logo {
   font-family: "Raleway", sans-serif;
-
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
@@ -402,7 +554,6 @@ img {
 }
 .footer-span {
   font-family: "Raleway", sans-serif;
-
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
@@ -415,7 +566,6 @@ img {
   order: 0;
   flex-grow: 0;
 }
-
 .footer-link {
   font-weight: 400;
   font-size: 16px;
@@ -423,4 +573,48 @@ img {
   letter-spacing: 0.02em;
   color: var(--second-btn-color);
   width: calc((100%-60px) / 4);
+}
+.footer-social{
+  display: flex;
+  flex-direction: column;
+}
+.footer-team-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: var(--main-text-color);
+  margin-bottom: 16px;
+}
+.footer-soc-list{
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.footer-soc-title {
+  width: 40px;
+  height: 40px;
+
+}
+
+.footer-soc-link{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--text-company-color);
+
+}
+.footer-soc-link:is(:hover,:focus){
+  background-color: var(--soc-focus-color);
+}
+
+.icon-social {
+
+
 }
