@@ -455,28 +455,22 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px
   height: 88px;
 }
 .icon-company-link {
-  text-decoration: none;
-  color: inherit;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+
   color: var(--text-company-color);
   
 }
 
 .icon-company{
-  
   width: 100%;
   height: 100%;
 
   border: 1px solid #000000;
+  border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
   fill: currentColor;
+  padding: 16px 32px;
   
 }
 
