@@ -433,7 +433,7 @@ background-color: var(--accent-color);
   background-color: var(--accent-color);
 }
 .section-soc-link:is(:hover,:focus) {
-  background-color: var(--soc-focus-color);
+  background-color: var(--text-accent-company);
 }
   
 /*Section Customers*/
@@ -519,9 +519,11 @@ background-color: var(--accent-color);
   margin-bottom: -48px;
 }
 .shadow {
+  display: block;
+  text-decoration: none;
 }
 .shadow:is(:hover,:focus) {
-box-shadow: 0px 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .section-portfolio .section-list-item + .section-list-item {
   margin-left: 24px;
@@ -606,10 +608,11 @@ box-shadow: 0px 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66,
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.1), var(--main-text-color);
+  background-color: var(--text-company-color);
 }
 .footer-soc-link:is(:hover,:focus){
-  background-color: var(--soc-focus-color);
+
+  background-color: rgba(255, 255, 255, 0.1) var(--background-color);
 }
 
 .icon-social {
